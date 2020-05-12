@@ -20,7 +20,6 @@ def nyc_pigeon_organizer(data)
     end
   memo
   end
-  binding.pry
 end
 
 pigeon_data = {
