@@ -15,6 +15,7 @@ def nyc_pigeon_organizer(data)
         else
           memo[e][k].push(k2)
         end
+        p e
         p memo[e]
       end
       memo2
