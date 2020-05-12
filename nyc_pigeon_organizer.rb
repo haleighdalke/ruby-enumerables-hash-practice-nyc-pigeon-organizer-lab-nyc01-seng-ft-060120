@@ -5,6 +5,7 @@ def nyc_pigeon_organizer(data)
   data.reduce({}) do |memo, (k, v)|
     v.reduce(nil) do |memo2, (k2, v2)|
       v2.map do |e|
+        #k = category keys, v = elements hash, k2 = element keys, v2 = names array, e = name as string
         k2 = k2.to_s
         if !memo.has_key?(e)
           memo[e] = {k => [k2]}
