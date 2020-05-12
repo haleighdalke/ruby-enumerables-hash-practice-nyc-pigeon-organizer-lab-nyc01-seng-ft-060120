@@ -14,10 +14,8 @@ def nyc_pigeon_organizer(data)
         else
           memo[e][k].push(k2)
         end
-        binding.pry
-        p e
-        p memo[e]
       end
+      binding.pry
       memo2
     end
   memo
