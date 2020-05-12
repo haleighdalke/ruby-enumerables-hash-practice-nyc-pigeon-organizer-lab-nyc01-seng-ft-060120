@@ -5,7 +5,7 @@ def nyc_pigeon_organizer(data)
     k.reduce({}) do |memo2, (k2, v2)|
       v2.map do |e|
         if !memo.has_key?(e)
-          memo[e] = Hash.new { |hash, k| 
+          memo[e] = Hash.new { |hash, k|
             hash[k] = [k2]
           }
         elsif memo.has_key?(e) && !memo[e].has_key?(k)
