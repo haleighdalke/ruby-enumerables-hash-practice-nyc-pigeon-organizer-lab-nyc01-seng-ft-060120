@@ -8,7 +8,7 @@ def nyc_pigeon_organizer(data)
         k = k.to_s
         k2 = k2.to_s
         if !memo.has_key?(e)
-          memo[e] = {:k => [k2]}
+          memo[e] = {k => [k2]}
         elsif memo.has_key?(e) && !memo[e].has_key?(k)
           memo[e][k] = [k2]
         else
