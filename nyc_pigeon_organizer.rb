@@ -4,7 +4,7 @@ def nyc_pigeon_organizer(data)
   data.reduce({}) do |memo, (k, v)|
     v.reduce(nil) do |memo2, (k2, v2)|
       v2.map do |e|
-        e = :e
+        e = e.to_sym
         k = k.to_s
         k2 = k2.to_s
         if !memo.has_key?(e)
