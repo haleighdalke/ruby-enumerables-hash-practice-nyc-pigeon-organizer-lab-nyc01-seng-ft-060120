@@ -2,7 +2,6 @@ require 'pry'
 
 def nyc_pigeon_organizer(data)
   # write your code here!
-  #for each value, add to list of names
   data.reduce({}) do |memo, (k, v)|
     v.reduce(nil) do |memo2, (k2, v2)|
       v2.map do |e|
