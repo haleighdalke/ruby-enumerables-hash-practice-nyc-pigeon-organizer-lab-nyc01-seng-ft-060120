@@ -2,7 +2,7 @@ def nyc_pigeon_organizer(data)
   # write your code here!
   #for each value, add to list of names
   data.reduce({}) do |memo, (k, v)|
-    k.reduce({}) do |memo2, (k2, v2)|
+    k.reduce(nil) do |memo2, (k2, v2)|
       v2.map do |e|
         if !memo.has_key?(e)
           memo[e] = Hash.new { |hash, k|
