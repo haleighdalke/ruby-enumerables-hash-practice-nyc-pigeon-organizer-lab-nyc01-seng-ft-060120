@@ -1,20 +1,20 @@
 def nyc_pigeon_organizer(data)
   # write your code here!
   #for each value, add to list of names
-  data.reduce() do |memo, (key, value)|
-    # puts key
-    # puts value
-    value.reduce(nil) do |inner_memo, (inner_key, inner_value)|
-      inner_value.map do |name|
-        memo[:name.to_sym] = {}
-        # memo[name][key] = []
-        # memo[name][key].append(inner_key.to_s)
+  data.reduce({}) do |memo, (k, v)|
+    k.reduce({}) do |memo2, (k2, v2)|
+      v2.map do |e|
+        if !memo.has_key?(e)
+          memo[e] = Hash.new { |hash, k| 
+            hash[k] = [k2]
+          }
+        elsif memo.has_key?(e) && !memo[e].has_key?(k)
+          memo[e][k] = [k2]
+        else
+          memo[e][k].push(k2)
+        end
       end
-
-      # puts inner_key
-      # puts inner_value
-
-      inner_memo
+      memo2
     end
   memo
   end
