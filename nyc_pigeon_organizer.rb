@@ -40,4 +40,4 @@ pigeon_data = {
     "City Hall" => ["Andrew"]
   }
 }
-p nyc_pigeon_organizer(pigeon_data)
+puts nyc_pigeon_organizer(pigeon_data)
