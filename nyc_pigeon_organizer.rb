@@ -1,3 +1,5 @@
+requre 'pry'
+
 def nyc_pigeon_organizer(data)
   # write your code here!
   #for each value, add to list of names
@@ -15,6 +17,7 @@ def nyc_pigeon_organizer(data)
         else
           memo[e][k].push(k2)
         end
+        binding.pry
         p e
         p memo[e]
       end
